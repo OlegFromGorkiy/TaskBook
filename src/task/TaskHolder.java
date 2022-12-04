@@ -27,6 +27,19 @@ public class TaskHolder {
             tasks.put(task.getId(), task);
         } else throw new NullPointerException("пустая задача");
     }
+    public void setTitle(int id, String title){
+       tasks.get(id).setTitle(title);
+    }
+    public void setDescription(int id, String description){
+        tasks.get(id).setDescription(description);
+    }
+    public void setTaskType(int id, TaskType taskType){
+        tasks.get(id).setType(taskType);
+    }
+    public void setDate(int id, LocalDateTime ldt){
+        tasks.get(id).setDate(ldt);
+    }
+
 
     public void deleteTask(int id) {
         tasks.get(id).setDeleted();
