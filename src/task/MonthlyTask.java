@@ -10,11 +10,11 @@ public class MonthlyTask extends Task {
     }
 
     @Override
-    LocalDateTime getNext(LocalDate data) {
-        if (data.getDayOfMonth() <= getDate().getDayOfMonth()){
-            return getDate().withYear(data.getYear()).withMonth(data.getMonthValue());
+    public LocalDateTime getNext(LocalDate date) {
+        if (date.getDayOfMonth() <= getDate().getDayOfMonth()){
+            return getDate().withYear(date.getYear()).withMonth(date.getMonthValue());
         }else {
-            return getDate().withYear(data.getYear()).withMonth(data.getMonthValue()).plusMonths(1);
+            return getDate().withYear(date.getYear()).withMonth(date.getMonthValue()).plusMonths(1);
         }
     }
 }

@@ -15,9 +15,9 @@ public class TaskHolder {
         addTask(new WeeklyTask("WeeklyTask", "for test only", TaskType.PRIVATE,
                 LocalDateTime.of(2022, 12, 5, 12, 0)));
         addTask(new MonthlyTask("MonthlyTask", "for test only", TaskType.PRIVATE,
-                LocalDateTime.of(2022, 12, 5, 12, 0)));
+                LocalDateTime.of(2022, 1, 31, 12, 0)));
         addTask(new AnnualTask("AnnualTask", "for test only", TaskType.PRIVATE,
-                LocalDateTime.of(2022, 12, 5, 12, 0)));
+                LocalDateTime.of(2020, 2, 29, 12, 0)));
     }
 
     private final Map<Integer, Task> tasks = new HashMap<>();

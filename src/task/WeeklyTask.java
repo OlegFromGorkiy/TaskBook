@@ -10,9 +10,9 @@ public class WeeklyTask extends Task {
     }
 
     @Override
-    LocalDateTime getNext(LocalDate data) {
-        LocalDateTime result = data.atTime(getDate().getHour(), getDate().getMinute());
-        DayOfWeek current = data.getDayOfWeek();
+    public LocalDateTime getNext(LocalDate date) {
+        LocalDateTime result = date.atTime(getDate().getHour(), getDate().getMinute());
+        DayOfWeek current = date.getDayOfWeek();
         DayOfWeek next = getDate().getDayOfWeek();
         int delta = next.getValue() - current.getValue();
         if (delta < 0) {

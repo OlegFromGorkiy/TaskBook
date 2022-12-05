@@ -12,7 +12,7 @@ public class SingleTask extends Task {
     }
 
     @Override
-    LocalDateTime getNext(LocalDate data) {
+    public LocalDateTime getNext(LocalDate date) {
         return this.getDate();
     }
 

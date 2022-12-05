@@ -1,14 +1,13 @@
 package task;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public abstract class Task {
+public abstract class Task implements Repeatable {
     private static int count;
     private final Integer id;
     private String title; //заголовок
     private String description; //описание
-    private LocalDateTime date;//дата
+    private LocalDateTime date; //дата
     private boolean isDeleted;
     private TaskType type;
 
@@ -107,6 +106,5 @@ public abstract class Task {
     public void setType(TaskType type) {
         this.type = type;
     }
-
-    abstract LocalDateTime getNext(LocalDate data);
+  //  public abstract LocalDateTime getNext(LocalDate date);
 }

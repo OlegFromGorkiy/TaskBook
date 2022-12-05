@@ -12,8 +12,8 @@ public class DailyTask extends Task {
     }
 
     @Override
-    public LocalDateTime getNext(LocalDate data) {
-        return data.atTime(getDate().getHour(), getDate().getMinute());
+    public LocalDateTime getNext(LocalDate date) {
+        return date.atTime(getDate().getHour(), getDate().getMinute());
 
     }
 

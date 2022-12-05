@@ -10,11 +10,11 @@ public class AnnualTask extends Task {
     }
 
     @Override
-    LocalDateTime getNext(LocalDate data) {
-        if (data.getDayOfYear() <= getDate().getDayOfYear()) {
-            return getDate().withYear(data.getYear());
+    public LocalDateTime getNext(LocalDate date) {
+        if (date.getDayOfYear() <= getDate().getDayOfYear()) {
+            return getDate().withYear(date.getYear());
         } else {
-            return getDate().withYear(data.getYear() + 1);
+            return getDate().withYear(date.getYear() + 1);
         }
     }
 }
